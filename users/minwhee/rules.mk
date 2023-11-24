@@ -1,0 +1,1 @@
+SRC += minwhee.c
