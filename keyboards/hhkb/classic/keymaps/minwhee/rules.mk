@@ -1,0 +1,1 @@
+MINWHEE_HHKB = yes

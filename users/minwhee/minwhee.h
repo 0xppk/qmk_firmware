@@ -2,6 +2,14 @@
 
 #include "quantum.h"
 
+#if defined(HHKB_ENABLE)
+#    include "hhkb/hhkb.h"
+#endif
+
+#if defined(MINIMI_ENABLE)
+#    include "minimi/minimi.h"
+#endif
+
 enum layers {
   _BASE,
   _FN,
@@ -9,13 +17,12 @@ enum layers {
 };
 
 enum tap_dance_keycodes {
-  TD_ESC_UTIL,
-  TD_CTRL_UTIL,
-  TD_BS_UTIL,
-  TD_FN_UTIL,
-  TD_ENT_UTIL,
-  TD_LCMD_TAB,
-  TD_LOPT_DEL,
+  ESC_UTIL,
+  FN_UTIL,
+  ENT_UTIL,
+  LCMD_CWTG,
+  LOPT_DEL,
+  COMM_DOT_SLSH,
 };
 
 typedef enum {
@@ -37,3 +44,4 @@ td_state_t cur_dance(tap_dance_state_t *state);
 void x_finished(tap_dance_state_t *state, void *user_data);
 void x_reset(tap_dance_state_t *state, void *user_data);
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
+
