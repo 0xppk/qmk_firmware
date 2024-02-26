@@ -8,7 +8,7 @@ __attribute__((weak)) bool dip_switch_update_mask_keymap(uint32_t state) {
 
 //! 캡스워드 LED
 void caps_word_set_user(bool active) {
-  writePin(A8, active);
+    writePin(A8, active);
 }
 
 //! 딥스위치
