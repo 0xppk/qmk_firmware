@@ -12,25 +12,21 @@
 
 enum layers {
     _BASE,
-    _SPLIT,
-    _UTILS,
-    _FN,
+    _LAYER1,
+    _LAYER2,
+    _LAYER3,
 };
 
 enum tap_dance_keycodes {
-    ESC_UTIL,
     FN_UTIL,
     ENT_UTIL,
     LCTRL_UTIL,
     LSFT_CWTG,
     LOPT_DEL,
-    LCMD_TAB,
+    LCMD_KOR,
 };
 
-enum combos {
-    CMD_I,
-    CMD_K,
-};
+#define KC_SOMETHING LGUI(KC_TAB)
 
 typedef enum {
     TD_NONE,
